@@ -1,0 +1,11 @@
+[mongo]
+192.168.20.101
+[nginx]
+192.168.20.102
+[flask]
+192.168.20.103
+[project:children]
+mongo
+nginx
+flask
+

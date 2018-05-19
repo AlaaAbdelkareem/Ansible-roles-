@@ -1,0 +1,13 @@
+---
+
+- name: download get-pip.py
+  get_url: url=https://bootstrap.pypa.io/get-pip.py  dest=/tmp
+    
+- name: install pip
+  become: yes
+  command: "python /tmp/get-pip.py"
+
+- name: install docker-py
+  become: yes
+  pip:
+    name: docker-py

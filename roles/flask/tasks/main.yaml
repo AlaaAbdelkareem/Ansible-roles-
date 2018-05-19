@@ -1,0 +1,11 @@
+- name: Create a flask container
+  docker_container:
+    name: flaskapp
+    image: jcdemo/flaskapp:latest
+    volumes:
+     - /data 
+    ports:
+     - "5000:5000"
+  become: yes
+
+

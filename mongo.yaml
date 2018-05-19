@@ -1,0 +1,7 @@
+- name: a play that runs entirely on the ansible host
+  hosts: mongo
+  user: appuser
+  become: yes
+  become_user: root
+  roles:
+    - mongo

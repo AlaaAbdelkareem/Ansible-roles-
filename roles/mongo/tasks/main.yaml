@@ -1,0 +1,10 @@
+- name: Create a mongo container
+  docker_container:
+    name: data
+    image: mongo:latest
+    volumes:
+     - /data 
+    ports:
+     - "27017:3000" 
+  become: yes
+
